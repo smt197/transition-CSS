@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senegal</title>
+    <style>
+        body{
+            position: relative;
+            top: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border: 4px solid black;
+            background-color: transparent;
+            height: 8vh;
+            width: 30vw;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+            perspective: 1500px;
+        }
+        .rouge {
+            position: absolute;
+            width: 100%;
+            height: 101%;
+            background-color: red;
+            z-index: -1;
+            bottom: 0;
+            left: 0;
+            rotate: x 0deg;
+            /* transition: transform 0.1s ease; */
+            transition: rotate 1s, left 1s,top 1s;
+            box-sizing: border-box;
+        }
+        .vert{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: translateX(-5%) translateY(-15%);
+            background-color: green; 
+            opacity: 0.8;
+            /* transition: transform 0.1s ease; */
+            rotate: 0 deg;
+            transition: rotate 1s, left 1s,top 1s;
+            box-sizing: border-box;            
+        }
+        .container span{
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            font-weight: bold;
+            color: yellow;
+            font-size: 30px;
+            z-index: -1;
+        }
+        .container .vert span{
+            color: white;
+            visibility: visible;
+        }
+        .container:hover{
+            .vert{
+                position: absolute;
+                left: 4.3%;
+                top: -25%;
+                rotate: x 78deg;
+                /* transform:  rotateX(60deg) skew(20deg); */
+            }
+            .rouge{
+                bottom: -25%;
+                rotate: x -78deg;
+                /* transform:  rotateX(60deg) skew(-20deg); */
+            }
+            .vert span {
+                visibility: hidden;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span>SENEGAL</span>
+        <div class="vert" style="position:
+            absolute;font-weight: bold;font-size: 30px;
+            color: white;">
+            <span>SENEGAL</span>
+        </div>
+        <div class="rouge"></div>
+    </div>
+</body>
+</html>
